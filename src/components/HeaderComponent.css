@@ -1,0 +1,15 @@
+#header{
+    background-color: palevioletred;
+}
+.headerContent{
+    display: flex;
+    justify-content: space-between;
+}
+ul{
+    list-style-type: none;
+    display: flex;
+    font-size: 20px;
+    column-gap: 20px;
+    align-items: center;
+    justify-content: center;
+}

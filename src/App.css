@@ -1,0 +1,8 @@
+#app{
+    /* background-color: green; */
+}
+.productsSections{
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+}
