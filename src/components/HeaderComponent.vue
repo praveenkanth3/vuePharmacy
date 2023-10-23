@@ -5,9 +5,9 @@
                 Local Pharmacy
             </h1>
             <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Products</li>
+                <li><router-link to="/home">Home</router-link></li>
+                <li><router-link to="/about">About</router-link></li>
+                <li><router-link to="/cart">Cart</router-link></li>
             </ul>
          </div>
     </div>
