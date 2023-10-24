@@ -19,6 +19,11 @@ export const store = new Vuex.Store(
                 console.log(payload);
                 state.total -= payload.item.val.price * payload.item.qty;
                 state.cartItem.splice(payload.index,1)
+            },
+            proceedToBuy(state){
+                state.total = 0;
+                state.cartItem.length = 0;
+                alert('Thank you for purchasing');
             }
           },
           getters:{
@@ -33,6 +38,9 @@ export const store = new Vuex.Store(
             },
             deleteFromCart(context,payload){
                 context.commit('deleteFromCart',payload);
+            },
+            proceedToBuy(context){
+                context.commit('proceedToBuy');
             }
           }
 

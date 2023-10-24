@@ -4,7 +4,6 @@
         <input v-model="feedback" />
         <button @click="onSubmitFeedback(feedback)">submit</button>
         <slot name="address" ></slot>
-        <slot name="ad" :feedback="feedback"></slot>
     </div>
 </template>
 <script>

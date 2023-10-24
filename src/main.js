@@ -27,6 +27,13 @@ const router = new VueRouter({
   routes
 })
 
+Vue.directive('headerStyle',{
+  bind(el,binding){
+    el.style.color = "white";
+    el.style.backgroundColor = 'pink'
+    el.style.fontSize = binding.value; 
+  }
+})
 new Vue({
   store,
   router,

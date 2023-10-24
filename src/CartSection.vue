@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div v-if="cartItems.length > 0">
         <table>
             <tr>
                     <th>No.</th>
@@ -17,6 +17,11 @@
             </tr>
         </table>
         <div>Total: {{ total }}</div>
+        <button @click="onClickBuy">Proceed To Buy</button>
+    </div>
+    <div v-else>
+        <p>Your cart is empty</p>
+        <router-link to="/home">-> go to home page and add some products</router-link>
     </div>
 
 </template>
@@ -46,6 +51,9 @@ export default{
     methods:{
         onclickDelete(payload){
             this.$store.dispatch('deleteFromCart', payload)
+        },
+        onClickBuy(){
+            this.$store.dispatch('proceedToBuy');
         }
     }
 

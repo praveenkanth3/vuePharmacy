@@ -1,7 +1,7 @@
 <template>
     <div id="header">
          <div class="headerContent">
-            <h1>
+            <h1 v-headerStyle>
                 Local Pharmacy
             </h1>
             <ul>

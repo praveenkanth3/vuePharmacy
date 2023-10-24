@@ -9,22 +9,23 @@
                     Grand Southern Trunk Road, Vallancherry, Taluk,
                     Chengalpattu, Tamil Nadu 603202
                 </pre>
-                <di></di>
             </template>
         </AboutPageSubSection>
-        <AboutPageSubSection>
-            <template v-slot:ad="slotProps">
-                <di>Your response {{ slotProps.feedback }}</di>
+        <EnquieSection>
+            <template v-slot:successMsg="slotProps">
+                <div v-if="slotProps.userName">Your enquiry  has been recorded  {{ slotProps.userName }}</div>
             </template>
-        </AboutPageSubSection>
+        </EnquieSection>
     </div>
 </template>
 <script>
 import AboutPageSubSection from './AboutPageSubSection.vue';
+import EnquieSection from './EnquieSection.vue';
 export default{
     name: 'AboutPage',
     components:{
         AboutPageSubSection,
+        EnquieSection,
     }
 }
 </script>
